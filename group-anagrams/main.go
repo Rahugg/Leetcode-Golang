@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 type Letters [26]byte
 
@@ -27,6 +30,10 @@ func groupAnagrams(strs []string) [][]string {
 }
 
 func main() {
-	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
-	fmt.Println(groupAnagrams(strs))
+// 	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
+	// fmt.Println(groupAnagrams(strs))
+	byteString:=[]byte("val")
+	fmt.Println(byteString)
+	sort.Slice(byteString, func(i,j int) bool { return byteString[i] < byteString[j]})
+	fmt.Println(byteString)
 }
